@@ -1,0 +1,23 @@
+{
+  "name": "url-inspector-worker",
+  "version": "1.0.0",
+  "description": "URL Inspector API - Cloudflare Workers Edition",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "esbuild src/index.js --bundle --format=esm --outfile=dist/index.js",
+    "deploy": "wrangler publish",
+    "deploy:staging": "wrangler publish --env staging",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "esbuild": "^0.19.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

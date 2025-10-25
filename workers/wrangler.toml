@@ -1,0 +1,27 @@
+name = "url-inspector-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# NO STORAGE - Stateless API only
+# No KV namespaces
+# No Durable Objects
+# Just pure API endpoints
+
+# Environment variables
+[vars]
+API_VERSION = "1.0.0"
+MAX_BATCH_SIZE = "20"
+DEFAULT_TIMEOUT = "12000"
+MAX_TIMEOUT = "30000"
+MIN_TIMEOUT = "5000"
+
+# Secrets (set with: wrangler secret put SECRET_NAME)
+# WHOIS_API_KEY (optional - for enhanced WHOIS data)
+# CF_API_TOKEN (optional - for Cloudflare-specific features)
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "modules"
+main = "./dist/index.js"
